@@ -37,7 +37,7 @@ Describe any challenges encountered while building the app.
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-<img src="http://g.recordit.co/De7qoc3ecb.gif" width=250><br>
+<img src="http://g.recordit.co/De7qoc3ecb.giff" width=250><br>
 
 ### Notes
 Getting used to the layouts of xcode and navigating through iOS apps

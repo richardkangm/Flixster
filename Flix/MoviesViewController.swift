@@ -39,7 +39,8 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                  self.tableView.reloadData()
 
          }
-    }
+            
+        }
 
         task.resume()
     }
@@ -67,14 +68,25 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        
+        // find slected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        // Pass the selected movie to the details of the view controller
     }
-    */
 
 }
